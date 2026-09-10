@@ -3,12 +3,10 @@ description: >-
   Recomendações de livros, journaling, setup de leitura e decoração
   filosófica para atravessar o caos moderno.
 
-# Se este site for publicado como usuario.github.io (conta dedicada,
-# raiz do domínio), deixe baseurl vazio.
-# Se em algum momento virar um projeto dentro de outra conta
-# (usuario.github.io/ordem-no-caos), troque para: baseurl: "/ordem-no-caos"
-baseurl: ""
-url: ""
+# Site publicado como projeto dentro da conta ordemnocaos:
+# https://ordemnocaos.github.io/ordem-no-caos/
+baseurl: "/ordem-no-caos"
+url: "https://ordemnocaos.github.io"
 
 collections:
   promocoes:

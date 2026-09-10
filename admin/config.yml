@@ -1,7 +1,7 @@
 backend:
   name: github
   # troque pelo repositório real, formato "usuario/nome-do-repo"
-  repo: SEU-USUARIO/ordem-no-caos-site
+  repo: ordemnocaos/ordem-no-caos
   branch: main
 
 media_folder: "assets/img/promocoes"
