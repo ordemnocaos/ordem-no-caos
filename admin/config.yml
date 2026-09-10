@@ -1,0 +1,46 @@
+backend:
+  name: github
+  # troque pelo repositório real, formato "usuario/nome-do-repo"
+  repo: SEU-USUARIO/ordem-no-caos-site
+  branch: main
+
+media_folder: "assets/img/promocoes"
+public_folder: "/assets/img/promocoes"
+
+collections:
+  - name: "promocoes"
+    label: "Promoções"
+    label_singular: "Promoção"
+    folder: "_promocoes"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nome
+    summary: "{{nome}} — {{categoria}}"
+    sortable_fields: ["date", "nome", "categoria"]
+    fields:
+      - { label: "Nome do produto", name: "nome", widget: "string" }
+      - label: "Categoria"
+        name: "categoria"
+        widget: "select"
+        options:
+          - "Livros"
+          - "Journaling"
+          - "Setup de Leitura"
+          - "Decoração Filosófica"
+      - { label: "Preço original", name: "preco_original", widget: "number", value_type: "float", required: false, hint: "deixe em branco se não houver desconto" }
+      - { label: "Preço com desconto", name: "preco_desconto", widget: "number", value_type: "float" }
+      - { label: "Link de afiliado", name: "link_afiliado", widget: "string" }
+      - { label: "Imagem do produto", name: "imagem", widget: "image" }
+      - { label: "Data", name: "date", widget: "datetime" }
+
+  - name: "textos"
+    label: "Textos do site"
+    files:
+      - name: "geral"
+        label: "Textos gerais"
+        file: "_data/site_texts.yml"
+        fields:
+          - { label: "Frase do topo (tagline)", name: "hero_tagline", widget: "string" }
+          - { label: "Aviso de afiliado", name: "disclosure", widget: "text" }
+          - { label: "Nota do rodapé", name: "footer_note", widget: "string" }
+          - { label: "Link do canal no YouTube", name: "youtube_url", widget: "string" }

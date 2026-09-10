@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+{% include head.html %}
+</head>
+<body>
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>

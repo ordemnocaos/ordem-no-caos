@@ -1,0 +1,8 @@
+{% comment %}
+  Uso: {% include price-br.html value=item.preco_desconto %}
+  Recebe um número (ex: 44.9 ou 129) e imprime "44,90" / "129,00".
+{% endcomment %}
+{% assign whole = include.value | floor %}
+{% assign cents = include.value | minus: whole | times: 100 | round %}
+{% if cents < 10 %}{% assign cents = cents | prepend: "0" %}{% endif %}
+{{ whole }},{{ cents }}
