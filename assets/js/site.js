@@ -18,6 +18,25 @@
   });
 })();
 
+// --- aviso de cookies (aparece uma vez, some ao aceitar) ---
+(function () {
+  var KEY = 'onc-cookie-consent';
+  var banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  if (!localStorage.getItem(KEY)) {
+    setTimeout(function () { banner.classList.add('show'); }, 400);
+  }
+
+  var acceptBtn = document.getElementById('cookie-accept');
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function () {
+      localStorage.setItem(KEY, '1');
+      banner.classList.remove('show');
+    });
+  }
+})();
+
 // --- busca + filtro de categoria ---
 (function () {
   var searchInput = document.getElementById('search-input');
