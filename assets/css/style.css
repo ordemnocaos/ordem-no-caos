@@ -49,7 +49,7 @@ header.hero{
 /* no tema claro a logo é dourado-fino sobre pergaminho e some de contraste;
    um halo escuro sutil atrás resolve isso. No escuro não precisa. */
 html:not([data-theme="dark"]) .emblem-wrap{
-  background:radial-gradient(circle, rgba(12,10,8,0.94) 0%, rgba(12,10,8,0.60) 55%, rgba(12,10,8,0) 78%);
+  background:#000000;
 }
 .emblem{width:88px; height:88px; display:block; object-fit:contain;}
 h1.word{
