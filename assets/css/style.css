@@ -12,10 +12,10 @@
 }
 /* tema escuro, ativado via data-theme="dark" no <html> */
 html[data-theme="dark"]{
-  --bg:#0B0B0D;
-  --surface:#151318;
-  --surface-2:#1D1A21;
-  --line:#2C2731;
+  --bg:#17140F;
+  --surface:#211C15;
+  --surface-2:#2B2419;
+  --line:#3B3223;
   --ink:#E9E4D8;
   --ink-dim:#A69E8E;
   --gold:#C9A24A;
@@ -41,7 +41,17 @@ header.hero{
   color:var(--ink); border-radius:20px; padding:7px 14px;
   font-family:'Crimson Pro',serif; font-size:14px; cursor:pointer;
 }
-.emblem{width:88px; height:88px; margin:0 auto 18px; display:block; object-fit:contain;}
+.emblem-wrap{
+  width:104px; height:104px; margin:0 auto 18px;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:50%;
+}
+/* no tema claro a logo é dourado-fino sobre pergaminho e some de contraste;
+   um halo escuro sutil atrás resolve isso. No escuro não precisa. */
+html:not([data-theme="dark"]) .emblem-wrap{
+  background:radial-gradient(circle, rgba(42,33,24,0.80) 0%, rgba(42,33,24,0.45) 55%, rgba(42,33,24,0) 78%);
+}
+.emblem{width:88px; height:88px; display:block; object-fit:contain;}
 h1.word{
   font-family:'Cinzel', serif; font-weight:600;
   font-size:clamp(30px,5vw,44px); letter-spacing:.04em;
