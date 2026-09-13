@@ -17,7 +17,7 @@
 <script>
   (function(){
     var saved = localStorage.getItem('onc-theme');
-    var theme = saved || '{{ site.theme_default | default: "dark" }}';
+    var theme = saved || '{{ site.theme_default | default: "light" }}';
     document.documentElement.setAttribute('data-theme', theme);
   })();
 </script>
