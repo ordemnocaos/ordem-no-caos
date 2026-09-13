@@ -19,7 +19,7 @@ defaults:
       layout: "default"
 
 # tema com o qual o site abre antes de o visitante trocar manualmente
-theme_default: dark
+theme_default: light
 
 plugins:
   - jekyll-feed
