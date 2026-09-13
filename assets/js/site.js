@@ -37,39 +37,59 @@
   }
 })();
 
-// --- busca + filtro de categoria ---
+// --- busca + filtro de categoria + paginação (12 em 12) ---
 (function () {
   var searchInput = document.getElementById('search-input');
   var chips = document.querySelectorAll('.chip');
-  var cards = document.querySelectorAll('.card');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
   var emptyState = document.getElementById('empty-state');
+  var loadMoreBtn = document.getElementById('load-more-btn');
+  var loadMoreWrap = document.getElementById('load-more-wrap');
   if (!searchInput || !cards.length) return;
 
+  var PAGE_SIZE = 12;
   var activeCat = 'todos';
+  var limit = PAGE_SIZE;
 
   function applyFilters() {
     var term = searchInput.value.trim().toLowerCase();
-    var visibleCount = 0;
 
-    cards.forEach(function (card) {
+    var matches = cards.filter(function (card) {
       var matchesTerm = card.dataset.nome.indexOf(term) !== -1;
       var matchesCat = activeCat === 'todos' || card.dataset.cat === activeCat;
-      var show = matchesTerm && matchesCat;
-      card.style.display = show ? 'flex' : 'none';
-      if (show) visibleCount++;
+      return matchesTerm && matchesCat;
     });
 
-    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+    cards.forEach(function (card) { card.style.display = 'none'; });
+    matches.slice(0, limit).forEach(function (card) { card.style.display = 'flex'; });
+
+    emptyState.style.display = matches.length === 0 ? 'block' : 'none';
+    if (loadMoreWrap) {
+      loadMoreWrap.style.display = matches.length > limit ? 'block' : 'none';
+    }
   }
 
-  searchInput.addEventListener('input', applyFilters);
+  searchInput.addEventListener('input', function () {
+    limit = PAGE_SIZE;
+    applyFilters();
+  });
 
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
       chips.forEach(function (c) { c.classList.remove('active'); });
       chip.classList.add('active');
       activeCat = chip.dataset.cat;
+      limit = PAGE_SIZE;
       applyFilters();
     });
   });
+
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', function () {
+      limit += PAGE_SIZE;
+      applyFilters();
+    });
+  }
+
+  applyFilters(); // já entra mostrando só os 12 primeiros
 })();
