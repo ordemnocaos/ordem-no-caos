@@ -40,7 +40,8 @@ layout: default
             <span class="off">-{{ off | round }}%</span>
           {% endif %}
         </div>
-        <a class="cta" href="{{ item.link_afiliado }}" target="_blank" rel="noopener sponsored">Ver oferta →</a>
+        <a class="cta" href="{{ item.link_afiliado }}" target="_blank" rel="noopener sponsored"
+           data-goatcounter-click="produto-{{ item.nome | slugify }}">Ver oferta →</a>
       </div>
     </div>
     {% endfor %}
