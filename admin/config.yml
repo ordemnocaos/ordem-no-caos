@@ -29,6 +29,7 @@ collections:
           - "Decoração Filosófica"
       - { label: "Preço original", name: "preco_original", widget: "number", value_type: "float", required: false, hint: "deixe em branco se não houver desconto" }
       - { label: "Preço com desconto", name: "preco_desconto", widget: "number", value_type: "float" }
+      - { label: "Destaque (Em Alta)", name: "destaque", widget: "boolean", required: false, default: false, hint: "Marque manualmente quando o produto estiver vendendo bem de verdade (não só recebendo clique)" }
       - { label: "Link de afiliado", name: "link_afiliado", widget: "string" }
       - { label: "Imagem do produto", name: "imagem", widget: "image" }
       - { label: "Data", name: "date", widget: "datetime" }
