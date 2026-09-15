@@ -122,6 +122,14 @@ main{max-width:720px; margin:0 auto; padding:32px 20px 10px;}
   font-size:13.5px; letter-spacing:.05em; color:var(--gold-dim);
   text-transform:uppercase;
 }
+.promo-badge{
+  display:block; width:fit-content;
+  background:var(--gold); color:var(--bg);
+  font-family:-apple-system,Segoe UI,Roboto,sans-serif;
+  font-size:11.5px; font-weight:800;
+  padding:3px 11px; border-radius:10px;
+  margin-bottom:6px;
+}
 .card h3{font-size:22px; font-weight:600; margin:5px 0 8px; line-height:1.3;}
 .prices{display:flex; align-items:baseline; gap:8px; margin-bottom:10px; flex-wrap:wrap;}
 .old{color:var(--ink-dim); text-decoration:line-through; font-size:16px;}
