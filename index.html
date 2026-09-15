@@ -30,6 +30,7 @@ layout: default
         {% endif %}
       </div>
       <div class="card-body">
+        {% if item.destaque %}<span class="promo-badge">🔥 Em alta</span>{% endif %}
         <span class="cat-tag">{{ item.categoria }}</span>
         <h3>{{ item.nome }}</h3>
         <div class="prices">
