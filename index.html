@@ -8,11 +8,11 @@ layout: default
     <input type="text" id="search-input" placeholder="Buscar por nome do produto...">
   </div>
   <div class="chips" id="category-chips">
-    <span class="chip active" data-cat="todos">Todos</span>
-    <span class="chip" data-cat="Livros">Livros</span>
-    <span class="chip" data-cat="Journaling">Journaling</span>
-    <span class="chip" data-cat="Setup de Leitura">Setup de Leitura</span>
-    <span class="chip" data-cat="Decoração Filosófica">Decoração Filosófica</span>
+    <button type="button" class="chip active" data-cat="todos">Todos</button>
+    <button type="button" class="chip" data-cat="Livros">Livros</button>
+    <button type="button" class="chip" data-cat="Journaling">Journaling</button>
+    <button type="button" class="chip" data-cat="Setup de Leitura">Setup de Leitura</button>
+    <button type="button" class="chip" data-cat="Decoração Filosófica">Decoração Filosófica</button>
   </div>
 </div>
 
@@ -22,6 +22,9 @@ layout: default
 
   <div id="product-list">
     {% assign items = site.promocoes | sort: 'date' | reverse %}
+    {% assign destaque_items = items | where: 'destaque', true %}
+    {% assign normal_items = items | where_exp: 'p', 'p.destaque != true' %}
+    {% assign items = destaque_items | concat: normal_items %}
     {% for item in items %}
     <div class="card" data-nome="{{ item.nome | downcase }}" data-cat="{{ item.categoria }}">
       <div class="thumb">
