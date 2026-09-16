@@ -4,5 +4,6 @@
 {% endcomment %}
 {% assign whole = include.value | floor %}
 {% assign cents = include.value | minus: whole | times: 100 | round %}
+{% if cents == 100 %}{% assign cents = 0 %}{% assign whole = whole | plus: 1 %}{% endif %}
 {% if cents < 10 %}{% assign cents = cents | prepend: "0" %}{% endif %}
 {{ whole }},{{ cents }}
