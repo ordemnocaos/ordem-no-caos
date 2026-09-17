@@ -157,8 +157,6 @@ main{max-width:1160px; margin:0 auto; padding:32px 20px 10px;}
 }
 .card h3{
   font-size:17px; font-weight:600; margin:5px 0 8px; line-height:1.3;
-  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
-  min-height:2.6em;
 }
 .prices{display:flex; align-items:baseline; gap:6px; margin-bottom:12px; flex-wrap:wrap;}
 .old{color:var(--ink-dim); text-decoration:line-through; font-size:13.5px;}
