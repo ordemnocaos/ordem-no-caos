@@ -2,6 +2,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ site.title }}</title>
 <meta name="description" content="{{ site.description }}">
+<meta name="theme-color" content="#7A5A16">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Verificação do Google Search Console: cole aqui a tag
+     <meta name="google-site-verification" content="..."> que o Google
+     vai te dar ao verificar a propriedade pelo método "Tag HTML". -->
+
+<!-- Open Graph / Twitter Card — preview ao compartilhar o link -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/img/logo.png' | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.title }}">
+<meta name="twitter:description" content="{{ site.description }}">
+<meta name="twitter:image" content="{{ '/assets/img/logo.png' | absolute_url }}">
 
 <link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicons/favicon.ico' | relative_url }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicons/favicon-32x32.png' | relative_url }}">
