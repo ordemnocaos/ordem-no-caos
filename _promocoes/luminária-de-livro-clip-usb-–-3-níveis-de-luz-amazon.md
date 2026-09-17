@@ -1,5 +1,5 @@
 ---
-nome: Luminária de Livro Clip USB – 3 Níveis de Luz [Amazon]
+nome: Luminária de Livro Clip USB – 3 Níveis de Luz
 categoria: Setup de Leitura
 preco_original: null
 preco_desconto: 26.9
