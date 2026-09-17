@@ -26,11 +26,20 @@ layout: default
     {% assign normal_items = items | where_exp: 'p', 'p.destaque != true' %}
     {% assign items = destaque_items | concat: normal_items %}
     {% for item in items %}
+    {% assign loja = "" %}
+    {% if item.link_afiliado contains "amazon" %}
+      {% assign loja = "Amazon" %}
+    {% elsif item.link_afiliado contains "meli" %}
+      {% assign loja = "Mercado Livre" %}
+    {% elsif item.link_afiliado contains "shopee" %}
+      {% assign loja = "Shopee" %}
+    {% endif %}
     <div class="card" data-nome="{{ item.nome | downcase }}" data-cat="{{ item.categoria }}">
       <div class="thumb">
         {% if item.imagem %}
           <img src="{{ item.imagem | relative_url }}" alt="{{ item.nome }}" onerror="this.style.display='none'">
         {% endif %}
+        {% if loja != "" %}<span class="store-tag">{{ loja }}</span>{% endif %}
       </div>
       <div class="card-body">
         {% if item.destaque %}<span class="promo-badge">🔥 Em alta</span>{% endif %}
