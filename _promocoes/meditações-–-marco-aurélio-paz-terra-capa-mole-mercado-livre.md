@@ -1,5 +1,5 @@
 ---
-nome: Meditações – Marco Aurélio (Paz & Terra, Capa Mole) [Mercado Livre]
+nome: Meditações – Marco Aurélio (Paz & Terra, Capa Mole)
 categoria: Livros
 preco_original: 54.9
 preco_desconto: 31.02
