@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ordemnocaos.github.io/ordem-no-caos/sitemap.xml
