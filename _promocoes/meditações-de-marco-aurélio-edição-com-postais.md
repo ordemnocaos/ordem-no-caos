@@ -1,5 +1,5 @@
 ---
-nome: 'Meditações de Marco Aurélio – Edição com Postais + Marcador Salve o cupom 20% : LEIA20 - Válido na sua primeira compra na Amazon'
+nome: Meditações de Marco Aurélio – Edição com Postais + Marcador Salve o cupom 20% LEIA20 - Válido na sua primeira compra na Amazon
 categoria: Livros
 preco_original: null
 preco_desconto: 29.9
