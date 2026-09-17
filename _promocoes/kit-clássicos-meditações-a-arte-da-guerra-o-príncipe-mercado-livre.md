@@ -1,5 +1,5 @@
 ---
-nome: 'Kit Clássicos: Meditações + A Arte da Guerra + O Príncipe [Mercado Livre]'
+nome: 'Kit Clássicos: Meditações + A Arte da Guerra + O Príncipe'
 categoria: Livros
 preco_original: 59.97
 preco_desconto: 33.53
