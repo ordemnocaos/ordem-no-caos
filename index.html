@@ -22,7 +22,7 @@ layout: default
 
   <div id="product-list">
     {% assign items = site.promocoes | sort: 'date' | reverse %}
-    {% assign destaque_com_prioridade = items | where_exp: 'p', 'p.destaque == true and p.prioridade' | sort: 'prioridade' %}
+    {% assign destaque_com_prioridade = items | where_exp: 'p', 'p.destaque == true and p.prioridade != nil' | sort: 'prioridade' %}
     {% assign destaque_sem_prioridade = items | where_exp: 'p', 'p.destaque == true and p.prioridade == nil' %}
     {% assign normal_items = items | where_exp: 'p', 'p.destaque != true' %}
     {% assign items = destaque_com_prioridade | concat: destaque_sem_prioridade | concat: normal_items %}
