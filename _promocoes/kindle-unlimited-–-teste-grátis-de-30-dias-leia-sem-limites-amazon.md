@@ -1,5 +1,5 @@
 ---
-nome: Kindle Unlimited – Teste Grátis de 30 Dias (Leia Sem Limites) [Amazon]
+nome: Kindle Unlimited – Teste Grátis de 30 Dias (Leia Sem Limites)
 categoria: Livros
 preco_original: null
 preco_desconto: 24.9
