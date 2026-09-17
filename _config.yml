@@ -23,6 +23,7 @@ theme_default: light
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
