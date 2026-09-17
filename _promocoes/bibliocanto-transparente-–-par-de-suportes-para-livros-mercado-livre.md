@@ -1,5 +1,5 @@
 ---
-nome: Bibliocanto Transparente – Par de Suportes para Livros [Mercado Livre]
+nome: Bibliocanto Transparente – Par de Suportes para Livros
 categoria: Setup de Leitura
 preco_original: 20.97
 preco_desconto: 18.97
