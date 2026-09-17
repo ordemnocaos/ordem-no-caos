@@ -1,5 +1,5 @@
 ---
-nome: Lista de Kindles – Encontre o Leitor Ideal para Você [Amazon]
+nome: Lista de Kindles – Encontre o Leitor Ideal para Você
 categoria: Setup de Leitura
 preco_original: null
 preco_desconto: 899
