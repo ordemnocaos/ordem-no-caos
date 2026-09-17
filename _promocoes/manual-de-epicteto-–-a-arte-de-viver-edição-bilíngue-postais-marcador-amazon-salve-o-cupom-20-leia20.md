@@ -1,5 +1,5 @@
 ---
-nome: 'Manual de Epicteto – A Arte de Viver (Edição Bilíngue + Postais + Marcador) Salve o cupom 20%: LEIA20'
+nome: Manual de Epicteto – A Arte de Viver (Edição Bilíngue + Postais + Marcador) Salve o cupom 20% - LEIA20
 categoria: Livros
 preco_original: 37.9
 preco_desconto: 30.42
