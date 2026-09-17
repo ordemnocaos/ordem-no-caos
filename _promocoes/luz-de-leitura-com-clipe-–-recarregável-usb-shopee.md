@@ -1,5 +1,5 @@
 ---
-nome: Luz de Leitura com Clipe – Recarregável USB [Shopee]
+nome: Luz de Leitura com Clipe – Recarregável USB
 categoria: Setup de Leitura
 preco_original: null
 preco_desconto: 69.12
