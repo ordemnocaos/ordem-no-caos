@@ -1,5 +1,5 @@
 ---
-nome: Meditações – Marco Aurélio (Capa Dura Almofadada) [Mercado Livre]
+nome: Meditações – Marco Aurélio (Capa Dura Almofadada)
 categoria: Livros
 preco_original: null
 preco_desconto: 26.9
