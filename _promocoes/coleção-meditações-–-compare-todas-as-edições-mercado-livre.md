@@ -1,5 +1,5 @@
 ---
-nome: Coleção Meditações – Compare Todas as Edições [Mercado Livre]
+nome: Coleção Meditações – Compare Todas as Edições
 categoria: Livros
 preco_original: null
 preco_desconto: 34.9
