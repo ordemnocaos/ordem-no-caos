@@ -1,5 +1,5 @@
 ---
-nome: Box O Essencial do Estoicismo [Amazon] *Somente 8 em estoque!
+nome: Box O Essencial do Estoicismo *Somente 8 em estoque!
 categoria: Livros
 preco_original: null
 preco_desconto: 56.6
