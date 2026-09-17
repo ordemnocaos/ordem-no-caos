@@ -1,5 +1,5 @@
 ---
-nome: Sobre a Brevidade da Vida – Sêneca (Edição Bilíngue + Postais + Marcador) [Amazon]
+nome: Sobre a Brevidade da Vida – Sêneca (Edição Bilíngue + Postais + Marcador)
 categoria: Livros
 preco_original: null
 preco_desconto: 26.98
