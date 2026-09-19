@@ -1,0 +1,36 @@
+name: Verificação de links de afiliado
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"   # toda segunda-feira, 12h UTC = 9h em Brasília
+  workflow_dispatch: {}     # permite rodar manualmente a qualquer hora, pela aba Actions
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install requests pyyaml
+
+      - name: Rodar verificação de links
+        run: python .github/scripts/check_links.py
+
+      - name: Abrir issue com o relatório
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "Verificação de links de afiliado — $(date +'%d/%m/%Y')" \
+            --body-file relatorio-links.md
