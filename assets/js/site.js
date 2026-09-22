@@ -37,7 +37,7 @@
   }
 })();
 
-// --- busca + filtro de categoria + paginação (12 em 12) ---
+// --- busca + filtro de categoria + "Mais Recentes" + paginação (12 em 12) ---
 (function () {
   var searchInput = document.getElementById('search-input');
   var chips = document.querySelectorAll('.chip');
@@ -49,6 +49,7 @@
 
   var PAGE_SIZE = 12;
   var activeCat = 'todos';
+  var chronoMode = false; // true = aba "Mais Recentes": ignora Destaque, ordena só por data
   var limit = PAGE_SIZE;
 
   function applyFilters() {
@@ -60,8 +61,21 @@
       return matchesTerm && matchesCat;
     });
 
-    cards.forEach(function (card) { card.style.display = 'none'; });
-    matches.slice(0, limit).forEach(function (card) { card.style.display = 'flex'; });
+    if (chronoMode) {
+      matches.sort(function (a, b) {
+        return Number(b.dataset.date) - Number(a.dataset.date);
+      });
+    }
+
+    cards.forEach(function (card) {
+      card.style.display = 'none';
+      card.style.order = ''; // volta pra ordem natural (Destaque primeiro) por padrão
+    });
+
+    matches.slice(0, limit).forEach(function (card, i) {
+      card.style.display = 'flex';
+      if (chronoMode) { card.style.order = i; }
+    });
 
     emptyState.style.display = matches.length === 0 ? 'block' : 'none';
     if (loadMoreWrap) {
@@ -79,6 +93,7 @@
       chips.forEach(function (c) { c.classList.remove('active'); });
       chip.classList.add('active');
       activeCat = chip.dataset.cat;
+      chronoMode = chip.dataset.mode === 'recentes';
       limit = PAGE_SIZE;
       applyFilters();
     });
