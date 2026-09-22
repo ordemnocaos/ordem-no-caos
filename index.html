@@ -13,6 +13,7 @@ layout: default
     <button type="button" class="chip" data-cat="Journaling">Journaling</button>
     <button type="button" class="chip" data-cat="Setup de Leitura">Setup de Leitura</button>
     <button type="button" class="chip" data-cat="Decoração Filosófica">Decoração Filosófica</button>
+    <button type="button" class="chip" data-cat="todos" data-mode="recentes">Mais Recentes</button>
   </div>
 </div>
 
@@ -36,7 +37,7 @@ layout: default
     {% elsif item.link_afiliado contains "shopee" %}
       {% assign loja = "Shopee" %}
     {% endif %}
-    <div class="card" data-nome="{{ item.nome | downcase }}" data-cat="{{ item.categoria }}">
+    <div class="card" data-nome="{{ item.nome | downcase }}" data-cat="{{ item.categoria }}" data-date="{{ item.date | date: '%s' }}">
       <div class="thumb">
         {% if item.imagem %}
           <img src="{{ item.imagem | relative_url }}" alt="{{ item.nome }}" onerror="this.style.display='none'">
